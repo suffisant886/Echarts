@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./柱形图.css">
+    <script src="./echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+
+    <script>
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.querySelector('#box'));
+        // 绘制图表
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},//图标提示框
+            xAxis: {
+                data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+            },//坐标轴x周的图例type:类目
+            yAxis: {},//y轴内容
+            series: [
+                {
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }
+            ]
+        }
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
