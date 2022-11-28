@@ -1,6 +1,6 @@
 (function () {
   var heng = echarts.init(document.querySelector('.line'))
-  var color = ["pink", "blue", "gray", "red", "yellow"]
+  var color1 = ["pink", "blue", "gray", "red", "yellow"]
   var option = {
     title: {
       text: '学习进度',
@@ -71,7 +71,7 @@
         itemStyle: {
           barBorderRadius: 20,
           color: function (res) {
-            return color[res.dataIndex]
+            return color1[res.dataIndex]
           }
         },
         barWidth: 15,
